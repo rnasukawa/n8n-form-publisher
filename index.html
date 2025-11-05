@@ -1,0 +1,38 @@
+
+
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>ニュースサイト登録フォーム</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { font-family: 'Hiragino Kaku Gothic Pro', 'Meiryo', sans-serif; padding: 20px; max-width: 600px; margin: 0 auto; }
+        .form-group { margin-bottom: 20px; }
+        label { display: block; margin-bottom: 8px; font-weight: bold; color: #333; }
+        input[type="text"] { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box; }
+        button { padding: 10px 20px; background-color: #007bff; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 16px; }
+        button:hover { background-color: #0056b3; }
+    </style>
+</head>
+<body>
+    <h1>新しいRSSフィードを登録</h1>
+    <p>以下のフォームにサイト名とRSS/AtomのURLを入力してください。データはn8nのワークフローに直接送信されます。</p>
+    
+    <form action="https://n8n-rnas.onrender.com/webhook/097b2b3c-3f77-4ffb-9f34-601ee3f4750f" method="POST">
+        
+        <div class="form-group">
+            <label for="site_name">サイト名:</label>
+            <input type="text" id="site_name" name="site_name" required placeholder="例: Tech News Daily">
+        </div>
+        
+        <div class="form-group">
+            <label for="rss_url">RSS/Atom URL:</label>
+            <input type="text" id="rss_url" name="rss_url" required placeholder="例: https://example.com/feed.xml">
+        </div>
+        
+        <button type="submit">登録する</button>
+    </form>
+</body>
+</html>
